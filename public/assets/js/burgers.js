@@ -16,7 +16,9 @@ $(function() {
         data: newDevouredState
       }).then(
         function() {
+          // showModal();
           console.log("changed devoured to", newDevoured);
+
           // Reload the page to get the updated list
           location.reload();
         }
@@ -52,11 +54,18 @@ $(function() {
         data: newBurger
       }).then(
         function() {
+      
           console.log("created new burger");
           // Reload the page to get the updated list
+
           location.reload();
         }
       );
     });
   });
   
+  function showModal(){
+    // https://media.giphy.com/media/3o7bujw6Hya4gtjLW0/giphy.gif
+    $('#burger-modal').modal("show");
+
+  }

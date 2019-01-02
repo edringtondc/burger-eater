@@ -17,6 +17,18 @@ router.get("/", function(req, res) {
 
 });
 
+router.get("/api/burgers", function(req, res) {
+  // res.send("Hello");
+  burgers.all(function(data) {
+      var hbsObject = {
+        burgers: data
+      };
+      console.log(hbsObject);
+      res.json(data);
+    });
+
+});
+
 router.post("/api/burgers", function(req, res) {
   var vals = req.body.burger_name
 

@@ -1,57 +1,94 @@
-<h1>Eat a Burger!</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Eat Da Burger</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="">API <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<h2>Burgers not Devoured</h2>
+<div id="burger-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <img src="https://media.giphy.com/media/3o7bujw6Hya4gtjLW0/giphy.gif" alt="gif of Kate Hudson eating a burger"/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  <li>
-    {{burger_name}}
+<div class="container">
+  <div class="card burger-menu">
+    <h2>Burger Menu</h2>
 
-    <button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
-      {{#if devoured}}undevour!{{else}}DEVOUR!{{/if}}
-    </button>
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      <li>
+        {{burger_name}}
 
-    <button class="delete" data-id="{{id}}">Delete</button>
-  </li>
+        <button  type="button" class="btn btn-warning change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
+          {{#if devoured}}undevour!{{else}}DEVOUR!{{/if}}
+        </button>
 
-  {{/unless}}
-  {{/each}}
-</ul>
+        <button type="button" class="btn btn-danger change-devoured delete" data-id="{{id}}">Delete</button>
+      </li>
 
-<h2>Burgers Devoured!</h2>
+      {{/unless}}
+      {{/each}}
+    </ul>
 
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  <li>
-    {{burger_name}}
+    <h2>Burgers Devoured!</h2>
 
-    {{!-- <button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
-      {{#if devoured}}undevour!{{else}}DEVOUR!{{/if}}
-    </button> --}}
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      <li>
+        {{burger_name}}
 
-    <button class="delete" data-id="{{id}}">Delete</button>
-  </li>
-  {{/if}}
-  {{/each}}
-</ul>
+        {{!-- <button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
+          {{#if devoured}}undevour!{{else}}DEVOUR!{{/if}}
+        </button> --}}
 
+                <button type="button" class="btn btn-danger change-devoured delete" data-id="{{id}}">Delete</button>
 
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="newburger">Add a Burger:</label>
-    <input type="text" id="newburger" name="burger_name">
+      </li>
+      {{/if}}
+      {{/each}}
+    </ul>
   </div>
 
-  {{!-- <div class="form-group">
-    <label for="devoured">Devoured</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div> --}}
+  <div class="card add-burger">
+    <h2>Add a Burger</h2>
+    <form class="create-form">
 
-  <button type="submit">Add Burger</button>
-</form>
+      <div class="form-group">
+        <label for="newburger">Add a Burger:</label>
+        <input type="text" id="newburger" name="burger_name">
+      </div>
+
+      {{!-- <div class="form-group">
+        <label for="devoured">Devoured</label><br>
+        <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+        <input type="radio" name="sleepy" value="0"> Awake
+      </div> --}}
+
+      <button type="submit">Add Burger</button>
+    </form>
+
+  </div>
+</div>
