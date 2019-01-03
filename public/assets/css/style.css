@@ -1,3 +1,26 @@
-html{
-    background-color: lightcoral;
+/* html{
+    background-image:  url("../img/burgerbackground.jpg");
+} */
+
+html { 
+    background: url("../img/burger2.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.burger-menu, .add-burger {
+    background-color: rgb(255,253,231,.6);
+    padding: 1em;
+}
+
+li {
+    margin: 1em; 
+}
+
+.btn {
+    height: 28px;
+    line-height: 28px;
+    padding: 0px 11px;
 }
