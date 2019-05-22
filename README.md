@@ -4,7 +4,9 @@
 
 ### Technology Used:
 * Javascript
+* Express
 * Handlebars
 * MySQL
 * Materalize framework
-*
+* MVC file structure
+
