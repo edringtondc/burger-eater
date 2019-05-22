@@ -2,7 +2,9 @@
 
 ### This app uses a MySQL database to store burgers. You can then delete or "devour" the burger. 
 
-### Technology Used
+### Technology Used:
+* Javascript
 * Handlebars
 * MySQL
 * Materalize framework
+*
