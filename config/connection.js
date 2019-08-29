@@ -7,7 +7,7 @@ var connection;
 if (process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 
-//if no variable, it falls back on an explicityly defined local database
+//if no variable, it falls back on an explicitly defined local database
 } else {
 
  connection = mysql.createConnection({

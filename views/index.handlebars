@@ -15,11 +15,6 @@
           {{#if devoured}}undevour!{{else}}DEVOUR!{{/if}}</a>
 
 
-        {{!-- <button type="button" class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
-          {{#if devoured}}undevour!{{else}}DEVOUR!{{/if}}
-        </button> --}}
-
-
         <a class="waves-effect waves-light btn delete yellow lighten-1 black-text" data-id="{{id}}">delete</a>
       </li>
 
@@ -37,9 +32,7 @@
       <li class="black-text">
         {{burger_name}}
 
-        {{!-- <button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
-          {{#if devoured}}undevour!{{else}}DEVOUR!{{/if}}
-        </button> --}}
+     
         <a class="waves-effect waves-light btn delete yellow lighten-1 black-text" data-id="{{id}}">delete</a>
 
 
@@ -61,11 +54,6 @@
         <input type="text" id="newburger" name="burger_name">
       </div>
 
-      {{!-- <div class="form-group">
-        <label for="devoured">Devoured</label><br>
-        <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-        <input type="radio" name="sleepy" value="0"> Awake
-      </div> --}}
       <button class="btn waves-effect waves-light yellow lighten-1 black-text" type="submit" name="action">Add Burger
         <i class="material-icons right">check</i>
       </button>
